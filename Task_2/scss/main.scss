@@ -1,3 +1,21 @@
 // Zde piš své styly
+@use "sass:color";
 
-// Jeee, to je moc tezke, ja to asi neumim vyresit.
+$main-color: #0088ff;
+$dark-color: color.adjust($main-color, $lightness: -20%);
+
+
+.box {
+  width: 200px;
+  height: 100px;
+  color: white;
+  text-align: center;
+}
+
+.box--primary {
+  background: $main-color;
+}
+
+.box--dark {
+  background: $dark-color;
+}
