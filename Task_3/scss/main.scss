@@ -1,7 +1,7 @@
 // Zde piš své styly
 
 
-@mixin fancyTitle {
+@mixin fancyTitle($height: 5px) {
   color: blue;
   position: relative;
 
@@ -9,7 +9,7 @@
     content: '';
     display: block;
     width: 80px;
-    height: 5px;
+    height: $height;
     background: red;
 
     position: absolute;
@@ -19,8 +19,6 @@
   }
 }
 
-
-
 .title {
   @include fancyTitle;
   font-family: sans-serif;
@@ -28,5 +26,5 @@
 }
 
 p {
-  @include fancyTitle;
+  @include fancyTitle(30px);
 }
